@@ -7,6 +7,11 @@ def welcome(name: str):
 Here toy can find many cool games to play'''
 
 
+def test():
+    print("test")
+    print("naor amaniak")
+
+
 def check_input_validation(choose, start_range, end_range):
     """
     check_input_validation check if the input is valid or not
