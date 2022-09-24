@@ -1,3 +1,8 @@
+from helper_functions import check_input_validation
+from GuessGame import GuessGame
+from MemoryGame import MemoryGame
+
+
 def welcome(name: str):
     """
     param name: get the name of player
@@ -5,27 +10,6 @@ def welcome(name: str):
     """
     return f'''hello {name} and welcome to the World of Games (WoG)
 Here toy can find many cool games to play'''
-
-
-def test():
-    print("test")
-    print("naor amaniak")
-
-
-def check_input_validation(choose, start_range, end_range):
-    """
-    check_input_validation check if the input is valid or not
-    param choose: get the chosen value of player
-    param start_range: the first number of the range
-    param end_range: the last number of the range that exclude from range
-    return: if the input is valid or not
-    """
-    if not choose.isdigit():
-        return False
-    elif int(choose) not in range(start_range, end_range):
-        return False
-    else:
-        return True
 
 
 def load_game():
@@ -50,3 +34,9 @@ def load_game():
         difficulty = input("You choose wrong difficulty, Please choose game difficulty from 1 to 5:")
     print(f"the  chosen game is: {choose}")
     print(f"the  difficulty  chosen is: {difficulty}")
+    if choose == "1":
+        game = MemoryGame(difficulty)
+        game.play()
+    if choose == "2":
+        game = GuessGame(difficulty)
+        game.play()
