@@ -8,7 +8,7 @@ def check_input_validation(choose, start_range, end_range):
     """
     if not choose.isdigit():
         return False
-    elif int(choose) not in range(start_range, end_range):
+    elif float(choose) not in range(start_range, end_range):
         return False
     else:
         return True

@@ -1,6 +1,7 @@
 from helper_functions import check_input_validation
 from GuessGame import GuessGame
 from MemoryGame import MemoryGame
+from CurrencyRouletteGame import CurrencyRouletteGame
 
 
 def welcome(name: str):
@@ -39,4 +40,7 @@ def load_game():
         game.play()
     if choose == "2":
         game = GuessGame(difficulty)
+        game.play()
+    if choose == "3":
+        game = CurrencyRouletteGame(difficulty)
         game.play()

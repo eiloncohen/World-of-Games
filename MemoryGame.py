@@ -2,7 +2,6 @@ import random
 from helper_functions import check_input_validation
 import functools
 import time
-import sys
 
 
 def is_list_equal(l1, l2):
